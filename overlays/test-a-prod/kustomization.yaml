@@ -25,3 +25,6 @@ images:
 - name: test-a
   newName: ghcr.io/louishaftmann/kubernetes-test-app
   newTag: 2c4d469c638ada81d34a220a9a5ef455fc2f65f8
+- name: test-a-prod
+  newName: ghcr.io/louishaftmann/kubernetes-test-app
+  newTag: c27b8aad9d282048a4bba271486697d4ac15d4d5
