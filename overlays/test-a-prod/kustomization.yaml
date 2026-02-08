@@ -1,30 +1,28 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-resources:
-- ../../bases/web
-
 namespace: test-a-prod
-
 namePrefix: test-a-prod-
 
-labels:
-- includeSelectors: true
-  pairs:
-    env: production
-    project: test-a
+configMapGenerator:
+  - name: project-env-values
+    literals:
+      - PROJECT_SLUG=test-a
+      - ENV_SLUG=prod
+    options:
+      disableNameSuffixHash: true
+
+images:
+- name: test-a
+  newName: ghcr.io/louishaftmann/kubernetes-test-app
+  newTag: 06598925d24f435cf014600d53c0e5f928245938
+
+resources:
+- ../../bases/web
+- ../../bases/infisical
 
 configurations:
 - ../../configs/kustomize-config.yaml
 
 patches:
 - path: ingress.yaml
-- path: deployment.yaml
-
-images:
-- name: test-a
-  newName: ghcr.io/louishaftmann/kubernetes-test-app
-  newTag: 2c4d469c638ada81d34a220a9a5ef455fc2f65f8
-- name: test-a-prod
-  newName: ghcr.io/louishaftmann/kubernetes-test-app
-  newTag: c27b8aad9d282048a4bba271486697d4ac15d4d5
