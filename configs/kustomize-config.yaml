@@ -4,6 +4,8 @@ nameReference:
   - kind: IngressRoute
     group: traefik.io
     path: spec/routes/services/name
+- kind: Secret
+  fieldSpecs:
   - kind: InfisicalSecret
     group: secrets.infisical.com
     path: spec/managedKubeSecretReferences/secretName
