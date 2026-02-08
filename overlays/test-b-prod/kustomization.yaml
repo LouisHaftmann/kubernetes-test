@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - ../../bases/web
+- ../../bases/infisical
 
 namespace: test-b-prod
 
@@ -20,6 +21,7 @@ configurations:
 patches:
 - path: ingress.yaml
 - path: deployment.yaml
+- path: infisical.yaml
 
 images:
 - name: test-b
