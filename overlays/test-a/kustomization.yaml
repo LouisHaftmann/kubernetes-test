@@ -24,5 +24,5 @@ patches:
 
 images:
 - name: test-a
-  newName: ghcr.io/LouisHaftmann/kubernetes-test-app
-  newTag: latest
+  newName: ghcr.io/louishaftmann/kubernetes-test-app
+  newTag: 06598925d24f435cf014600d53c0e5f928245938
