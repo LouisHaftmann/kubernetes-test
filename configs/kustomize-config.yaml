@@ -9,4 +9,4 @@ nameReference:
     path: spec/managedKubeSecretReferences/secretName
   - kind: Deployment
     group: apps
-    path: spec/template/spec/containers/envFrom/value/secretRef/name
+    path: spec/template/spec/containers/envFrom/secretRef/name
