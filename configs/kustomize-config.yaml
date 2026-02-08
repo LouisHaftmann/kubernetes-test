@@ -11,6 +11,3 @@ namePrefix:
 - kind: Deployment
   group: apps
   path: spec/template/spec/containers/envFrom/secretRef/name
-- kind: Deployment
-  group: apps
-  path: spec/template/spec/containers/image
