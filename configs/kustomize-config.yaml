@@ -7,3 +7,6 @@ nameReference:
   - kind: InfisicalSecret
     group: secrets.infisical.com
     path: spec/managedKubeSecretReferences/secretName
+  - kind: Deployment
+    group: apps
+    path: spec/template/spec/containers/envFrom/value/secretRef/name
