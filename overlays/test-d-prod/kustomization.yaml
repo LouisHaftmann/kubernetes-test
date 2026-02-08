@@ -19,7 +19,7 @@ images:
 
 components:
 - ../../bases/web
-# - ../../bases/infisical
+- ../../bases/infisical
 
 configurations:
 - ../../configs/kustomize-config.yaml
