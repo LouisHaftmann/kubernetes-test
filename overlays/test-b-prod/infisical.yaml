@@ -8,3 +8,6 @@ spec:
       secretsScope:
         projectSlug: test-b
         envSlug: prod
+
+  managedKubeSecretReferences:
+    secretNamespace: test-b-prod
