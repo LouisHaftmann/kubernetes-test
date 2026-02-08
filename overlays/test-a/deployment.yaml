@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
       - name: web
-        image: traefik/whoami:v1.11
+        image: test-a

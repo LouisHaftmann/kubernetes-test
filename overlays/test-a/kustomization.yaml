@@ -1,20 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
 resources:
-  - ../../bases/web
+- ../../bases/web
 
 namespace: test-a-prod
 
 namePrefix: test-a-prod-
 
 labels:
-  - includeSelectors: true
-    pairs:
-      project: test-a
-      env: production
+- includeSelectors: true
+  pairs:
+    env: production
+    project: test-a
 
 configurations:
-  - ../../configs/kustomize-config.yaml
+- ../../configs/kustomize-config.yaml
 
 patches:
-  - path: ingress.yaml
-  - path: deployment.yaml
-  - path: service.yaml
+- path: ingress.yaml
+- path: deployment.yaml
+- path: service.yaml
+
+images:
+- name: test-a
+  newName: ghcr.io/LouisHaftmann/kubernetes-test-app
+  newTag: latest
