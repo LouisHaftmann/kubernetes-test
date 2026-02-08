@@ -5,9 +5,11 @@ namespace: test-a-prod
 
 namePrefix: test-a-prod-
 
-commonLabels:
-  project: test-a
-  env: production
+labels:
+  - includeSelectors: true
+    pairs:
+      project: test-a
+      env: production
 
 configurations:
   - ../../configs/kustomize-config.yaml
