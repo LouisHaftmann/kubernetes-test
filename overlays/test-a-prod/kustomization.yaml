@@ -17,7 +17,7 @@ images:
   newName: ghcr.io/louishaftmann/kubernetes-test-app
   newTag: 06598925d24f435cf014600d53c0e5f928245938
 
-resources:
+components:
 - ../../bases/web
 - ../../bases/infisical
 
