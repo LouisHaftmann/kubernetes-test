@@ -5,6 +5,4 @@ metadata:
 spec:
   ports:
   - port: 3000
-    targetPort: 3000
-  selector:
-    app: web-app
+    targetPort: 80
