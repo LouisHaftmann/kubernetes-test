@@ -9,6 +9,9 @@ commonLabels:
   project: test-a
   env: production
 
+configurations:
+  - ../../configs/kustomize-config.yaml
+
 patches:
   - path: ingress.yaml
   - path: deployment.yaml
