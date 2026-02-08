@@ -5,17 +5,17 @@ namespace: test-b-prod
 namePrefix: test-b-prod-
 
 configMapGenerator:
-  - name: project-env-values
-    literals:
-      - PROJECT_SLUG=test-b
-      - ENV_SLUG=prod
-    options:
-      disableNameSuffixHash: true
+- name: project-env-values
+  literals:
+    - PROJECT_SLUG=test-b
+    - ENV_SLUG=prod
+  options:
+    disableNameSuffixHash: true
 
 images:
 - name: test-b-prod-web
   newName: ghcr.io/louishaftmann/kubernetes-test-app
-  newTag: 06598925d24f435cf014600d53c0e5f928245938
+  newTag: 63cbd2ce93b51eec15d285310cf6ca4b96bb868b
 
 components:
 - ../../bases/web
