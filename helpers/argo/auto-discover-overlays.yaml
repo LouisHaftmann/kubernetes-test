@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: auto-discover-overlays
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/LouisHaftmann/kubernetes-test.git
+      revision: main
+      directories:
+      - path: overlays/*
+
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/LouisHaftmann/kubernetes-test.git
+        targetRevision: main
+        path: '{{path}}'
+      
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{path.basename}}'
+
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
