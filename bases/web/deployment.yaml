@@ -17,5 +17,3 @@ spec:
       containers:
       - name: web
         image: web
-        ports:
-        - containerPort: 80
