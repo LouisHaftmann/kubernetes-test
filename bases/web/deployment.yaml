@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: todo-change
+        image: web
         ports:
         - containerPort: 80
