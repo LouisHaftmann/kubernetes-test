@@ -15,7 +15,7 @@ configMapGenerator:
 images:
 - name: test-a-prod-web
   newName: ghcr.io/louishaftmann/kubernetes-test-app
-  newTag: 408f5cd61cb7902923d20dbe4dffb7dc12e2ff14
+  newTag: 570addad38147798851153d2efdd72c1ca76ea50
 
 components:
 - ../../bases/web
