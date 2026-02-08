@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: my-registry/app:latest
+        image: todo-change
         ports:
         - containerPort: 80
