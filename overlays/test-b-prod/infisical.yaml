@@ -10,4 +10,4 @@ spec:
         envSlug: prod
 
   managedKubeSecretReferences:
-    secretNamespace: test-b-prod
+    - secretNamespace: test-b-prod
