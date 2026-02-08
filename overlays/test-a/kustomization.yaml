@@ -1,0 +1,14 @@
+resources:
+  - ../../bases/web
+
+namespace: test-a-prod
+
+namePrefix: test-a-prod-
+
+commonLabels:
+  project: test-a
+  env: production
+
+patches:
+  - path: ingress.yaml
+  - path: deployment.yaml
