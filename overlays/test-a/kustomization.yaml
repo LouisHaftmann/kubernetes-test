@@ -20,7 +20,6 @@ configurations:
 patches:
 - path: ingress.yaml
 - path: deployment.yaml
-- path: service.yaml
 
 images:
 - name: test-a
