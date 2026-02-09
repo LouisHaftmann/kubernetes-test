@@ -13,7 +13,7 @@ configMapGenerator:
     disableNameSuffixHash: true
 
 images:
-- name: test-a-prod-web
+- name: web
   newName: ghcr.io/louishaftmann/kubernetes-test-app
   newTag: eff216cf35e67186b6429446a42addd10c0fc272
 
