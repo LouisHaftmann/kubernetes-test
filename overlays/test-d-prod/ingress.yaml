@@ -4,7 +4,7 @@ metadata:
   name: web-ingress
 spec:
   routes:
-    - match: Host(`c.test.louishaftmann.de`)
+    - match: Host(`d.test.louishaftmann.de`)
       kind: Rule
       services:
         - name: web-service

@@ -4,10 +4,10 @@ kind: Kustomization
 namespace: test-c-prod
 
 configMapGenerator:
-- name: project-env-values
-  literals:
-    - PROJECT_SLUG=test-c
-    - ENV_SLUG=prod
+- literals:
+  - PROJECT_SLUG=test-c
+  - ENV_SLUG=prod
+  name: project-env-values
   options:
     disableNameSuffixHash: true
 
